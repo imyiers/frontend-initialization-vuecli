@@ -1,3 +1,4 @@
+import Cookie from 'js-cookie'
 
 /**
  * 设置Cookie
@@ -5,6 +6,7 @@
  * @param {string} value 
  */
 function setCookie(name, value) {
+  Cookie.set(name, value);
 }
 
 /**
@@ -12,7 +14,7 @@ function setCookie(name, value) {
  * @param {string} name 
  */
 function getCookie(name) {
-
+  return Cookie.get(name);
 }
 
 /**
@@ -20,5 +22,5 @@ function getCookie(name) {
  * @param {string} name 
  */
 function delCookie(name) {
-
+  Cookie.delete(name);
 }
