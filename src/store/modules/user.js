@@ -5,8 +5,8 @@ const useUserStore = defineStore('app-user', ({
     return {
       // 用户基础资料
       userInfo: {},
-      // 用户权限信息 '*:*:*'
-      userPermission: undefined,
+      // 用户权限信息 '[*:*:*]'
+      userPermission: [],
       // 用户身份信息 'user|super'
       userType: undefined,
     }
