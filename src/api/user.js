@@ -17,3 +17,12 @@ export function userLogout() {
     params: { ts: new Date().getTime() }
   })
 }
+
+/**
+ * 获得用户路由
+ */
+export function getRoutes() {
+  service.post('/user/routes', { sign: null, mid: null }, {
+    params: { ts: new Date().getTime() }
+  })
+}
