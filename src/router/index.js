@@ -1,3 +1,4 @@
+import { setBrowserTitle } from '@/plugins/browser-title'
 import { createRouter } from 'vue-router'
 
 const router = createRouter({
@@ -14,6 +15,8 @@ router.beforeEach((_to, _from, next) => {
 /**
  * 路由拦截器 - 后
  */
-router.afterEach((_to, _from) => {})
+router.afterEach((_to, _from) => {
+  setBrowserTitle(_to.meta?.title)
+})
 
 export default router
