@@ -27,8 +27,8 @@ service.interceptors.response.use((response) => {
   const { code, message } = response
   if (code === 10401) {
     // 登录过期处理
-    return response.content
+    return response.data
   }
 
-  return response.content
+  return response.data
 })
